@@ -1,0 +1,293 @@
+$brickSectionMainClr: #d4aa00;
+$brickSectionGrey: #69603d;
+
+@media (min-width: 500px) {
+    .section-stone {
+        h2 {
+            font-size: 90px;
+            padding: 10px 0;
+        }
+        h3 {
+            margin: 30px 0 20px;
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .subsection-container {
+            padding: 20px;
+        }
+    }
+    .text-container {
+        margin: 50px auto 10px;
+        padding: 20px 50px 20px 50px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    nav {
+        .nav-container {
+            padding: 10px;
+        }
+        .navbar-logo {
+            img {
+                width: 200px;
+                transform: translate(-7px,-9px);
+            }
+        }
+        #nav-icon-logo {
+            height: 60px;
+        }
+        .menu-button {
+            padding: 6px 8px;
+            font-size: 28px;
+            line-height: 28px;
+        }
+        &.mobile .nav-container {
+            padding: 10px 0 10px 0;
+        }
+        &.mobile .navbar-logo{
+            top: 10px;
+            left: 10px;
+        }
+        &.mobile .menu-button {
+            top: 10px;
+            right: 10px;
+        }
+    }
+
+    #home {
+        .text-container {
+            left: 5%;
+            h2 {
+                font-size: 60px;
+                line-height: 1em;
+
+            }
+            p {
+                font-size: 28px;
+                line-height: 1em;
+            }
+            #home-icon-logo {
+                height: 120px;
+            }
+        }
+    }
+    #about {
+        .services-item img {
+            width: 200px;
+            height: auto;
+        }
+        .offer-item {
+            margin-bottom: 30px;
+            h4 {
+                font-size: 30px;
+            }
+        }
+        .offer-item-price {
+            font-size: 40px;
+        }
+        .offer-item-desc {
+            font-size: 20px;
+        }
+
+    }
+    #promo {
+        h3 {
+            padding-bottom: 30px;
+            font-size: 36px;
+        }
+        p {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+    }
+    #contact {
+        address {
+            h3 {
+                margin-top: 45px;
+            }
+        }
+        .business-hours, address {
+            div {
+                font-size: 30px;
+            }
+        }
+        label {
+            font-size: 30px;
+        }
+        input, textarea {
+            font-size: 25px;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            padding: 10px;
+            font-size: 30px;
+        }
+    }
+    footer {
+        .licences {
+            font-size: 16px;
+        }
+        .copyright {
+            font-size: 20px;
+            line-height: 50px;
+        }
+        .social-icons {
+            a {
+                margin-right: 20px;
+            }
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 787px) {
+    .section-regular {
+        background-attachment: fixed;
+    }
+    .section-stone {
+        .subsection-container {
+            padding-bottom: 80px;
+            background-image: url(../assets/img/background-stone-1200.jpg);
+        }
+        button {
+            width: auto;
+        }
+    }
+
+    .text-container {
+        position: absolute;
+        top: 50%;
+        margin: 0;
+    }
+    .text-container-left {
+        left: 0;
+        padding-left: 70px;
+        transform: translate(0, -50%);
+    }
+    .text-container-middle {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    nav {
+        .nav-container {
+            opacity: 1;
+        }
+        .menu-button {
+            display: none;
+        }
+        .navbar {
+            display: block;
+        }
+    }
+
+    #home {
+        background-image: url(../assets/img/background-home-1200.jpg);
+        height: 100%;
+        max-height: 1200px;
+        .text-container {
+            width: 600px;
+            padding-left: 70px;
+            transform: translate(0, -50%);
+        }
+        .text-container img {
+          margin: 0 auto;
+          display: block;
+        }
+    }
+
+    #about {
+        // SERVICES SUBSECTION
+        .services-item img {
+            width: 100%;
+        }
+        .services-item p {
+            text-align: left;
+        }
+
+        //OFFER SUBSECTION
+        .offer-item-price {
+            border-top: 2px dashed $brickSectionMainClr;
+            border-bottom: 2px dashed $brickSectionMainClr;
+            border-left: none;
+            border-right: none;
+            line-height: 170px;
+        }
+        .offer-item div {
+            height: 200px;
+        }
+        .offer-item h4 {
+            text-align: left;
+        }
+        .offer-item-desc {
+            text-align: left;
+        }
+    }
+
+    #promo {
+        background-image: url(../assets/img/background-promo-1200.jpg);
+        height: 100%;
+        max-height: 700px;
+        .text-container {
+            width: 700px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    #contact {
+    }
+
+    footer {
+        .copyright, .licences {
+            text-align: left;
+        }
+        .social-icons {
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #about {
+        .offer-item {
+            h4 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-stone {
+        .subsection-container {
+            background-image: url(../assets/img/background-stone-full.jpg);
+        }
+    }
+    #home {
+        background-image: url(../assets/img/background-home-full.jpg);
+        .text-container {
+            h2 {
+                font-size: 90px;
+            }
+        }
+    }
+    #promo {
+        background-image: url(../assets/img/background-promo-full.jpg);
+    }
+}
+
+@media (min-width: 2500px) {
+    .section-regular {
+        background-attachment: local;
+    }
+}

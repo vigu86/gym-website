@@ -1,0 +1,471 @@
+$brickSectionMainClr: #d4aa00;
+$brickSectionGrey: #69603d;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #222;
+  color: #4d4d4d;
+  font-family: 'SegoeUI', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    line-height: 1em;
+}
+
+p {
+    line-height: 1.2em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.global-container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.section-regular {
+    background-size: cover;
+    background-color: #222;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: scroll;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-container {
+    text-align: center;
+    padding: 8vw;
+}
+
+.background-img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.section-stone {
+    // set position and z-index to show shadow
+    position: relative;
+    z-index: 1;
+    color: $brickSectionMainClr;
+    box-shadow: 0 0 20px 1px black;
+    border-style: dashed;
+    border-color: $brickSectionMainClr;
+    border-width: 0;
+    h2, h3, h4, h5, h6 {
+        font-family: 'Captureit', sans-serif;
+        font-weight: 100;
+    }
+    h2, h3, h4, p {
+        text-align: center;
+    }
+    // section header
+    h2 {
+        background-color: $brickSectionMainClr;
+        color: #69603d;
+        letter-spacing: 3px;
+        padding: 10px 0;
+        padding: 2vw 0;
+        font-size: 60px;
+        font-size: 15vw;
+
+    }
+    // subsection header
+    h3 {
+        margin: 30px 0 20px;
+        margin: 5vw 0 10vw;
+        font-size: 30px;
+        font-size: 10vw;
+        letter-spacing: 2px;
+    }
+    p {
+        font-size: 20px;
+        font-size: 4vw;
+    }
+    .subsection-container {
+        background-color: #111;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 20px;
+        padding: 4vw;
+    }
+}
+
+// FORMS
+.form-group {
+    margin-bottom: 20px;
+    margin-bottom: 4vw;
+    input, textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 5px;
+    }
+}
+
+// NAVIGATION BAR
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    overflow: visible;
+    z-index: 2;
+    .nav-container {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 10px;
+        padding: 2vw;
+        overflow: hidden;
+        position: relative;;
+        opacity: 0.8;
+    }
+    .navbar-logo {
+      float: left;
+      opacity: 0;
+      transition: all 1s;
+      h1 {
+       margin: 0;
+      }
+      img {
+       width: 200px;
+       width: 40vw;
+       transform: translate(-7px,-9px);
+       transform: translate(-1.4vw,-1.8vw);
+      }
+      &.show {
+          opacity: 1;
+      }
+    }
+    #nav-icon-logo {
+        background-image: url(../assets/img/icon-logo.png);
+        height: 60px;
+        height: 12vw;
+    }
+    .menu-button {
+        display: block;
+        border: 1px solid white;
+        float: right;
+        padding: 6px 8px;
+        padding: 1.2vw 1.6vw;
+        background-color: transparent;
+        color: white;
+        font-size: 28px;
+        font-size: 5.6vw;
+        line-height: 28px;
+        line-height: 5.6vw;
+    }
+    .menu-button:focus {
+        outline: none;
+    }
+    .navbar {
+        display: none;
+        overflow: hidden;
+        float: right;
+        a {
+            display: block;
+            float: left;
+        }
+        a, .menu-button {
+            padding: 6px 8px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            border-left: 1px solid white;
+            font-size: 20px;
+            line-height: 20px;
+            color: white;
+            text-transform: uppercase;
+            font-family: 'TheBoldFont', sans-serif;
+            letter-spacing: 2px;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        a:hover,
+        menu-button:hover {
+            background-color: white;
+            color: #333;
+        }
+        a:last-of-type, .menu-button {
+            border-right: 1px solid white;
+        }
+    }
+
+    // when mobile menu is open
+    &.mobile .nav-container {
+        padding: 10px 0 10px 0;
+        padding: 2vw 0 1vw 0;
+        background-color: #222;
+    }
+    &.mobile .navbar-logo {
+        display: block;
+        opacity: 1;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+        position: absolute;
+        top: 10px;
+        top: 2vw;
+        left: 10px;
+        left: 2vw;
+    }
+    &.mobile .menu-button {
+        position: absolute;
+        top: 10px;
+        top: 2vw;
+        right: 10px;
+        right: 2vw;
+    }
+    &.mobile .navbar {
+        width: 100%;
+        display: block;
+        margin-top: 60px;
+        background-color: #222;
+    }
+    &.mobile .navbar a {
+        float: none;
+        text-align: center;
+        padding: 20px 10px;
+        border: none;
+    }
+    &.mobile a:last-of-type {
+        border: none;
+    }
+
+}
+
+// SECTION SPECIFIC STYLES
+
+#home {
+    background-image: url(../assets/img/background-home-mobile.jpg);
+    .text-container {
+        h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: $brickSectionMainClr ;
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 58px;
+        font-size: 12vw;
+        line-height: 1em;
+        text-transform: uppercase;
+        text-shadow: 0 0 2px #000;
+        }
+        p {
+            color: #777;
+            font-size: 20px;
+            font-size: 5vw;
+            line-height: 1em;
+        }
+        #home-icon-logo {
+            background-image: url(../assets/img/icon-logo.png);
+            height: 100px;
+            height: 20vw;
+        }
+    }
+}
+
+#about {
+    // SERVICES SUBSECTION
+    .services {
+    }
+    .services-item img {
+        width: 150px;
+        width: 40vw;
+        height: 150px;
+        height: 40vw;
+        margin: 0 auto;
+
+    }
+    #services-icon-weightlfting {
+        background-image: url(../assets/img/icon-weightlifting.png);
+    }
+    #services-icon-cardio {
+        background-image: url(../assets/img/icon-cardio.png);
+    }
+    #services-icon-trainer {
+        background-image: url(../assets/img/icon-personal-trainer.png);
+    }
+    #services-icon-sauna {
+        background-image: url(../assets/img/icon-sauna.png);
+    }
+
+    .services-item p {
+        margin: 0;
+        color: $brickSectionMainClr;
+    }
+    // OFFER SUBSECTION
+    .offer {
+    }
+    .offer-item {
+        margin-bottom: 30px;
+        margin-bottom: 6vw;
+    }
+    .offer-item div {
+        height: auto;
+        border-width: 2px;
+        border-color: $brickSectionMainClr;
+    }
+    h4, .offer-item-price {
+        font-size: 25px;
+        font-size: 6vw;
+        line-height: 1em;
+    }
+    .offer-item-title, .offer-item-desc {
+        background-color: $brickSectionMainClr;
+        color: $brickSectionGrey;
+        border-style: solid;
+        font-family: 'SegoeUI', sans-serif;
+    }
+    .offer-item-price {
+        border-style: dashed;
+        border-top: 0;
+        border-bottom: 0;
+        border-left: 3px dashed $brickSectionMainClr;
+        border-right: 3px dashed $brickSectionMainClr;
+        font-family: 'Archivo Black', sans-serif;
+        text-align: center;
+        color: $brickSectionMainClr;
+        text-transform: uppercase;
+    }
+    .offer-item-desc {
+        font-size: 20px;
+        font-size: 4vw;
+        text-align: center;
+    }
+
+}
+
+#promo {
+    background-image: url(../assets/img/background-promo-mobile.jpg);
+    background-position: center;
+    font-family: 'CenturyGothic-Bold', sans-serif;
+    color: white;
+    text-align: center;
+    h3 {
+        padding-bottom: 29px;
+        padding-bottom: 6vw;
+        border-bottom: 1px solid white;
+        font-size: 36px;
+        font-size: 7vw;
+    }
+    p {
+        margin-top: 29px;
+        margin-top: 6vw;
+        font-size: 24px;
+        font-size: 4.9vw;
+    }
+    img {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+#contact {
+    address {
+        font-style: normal;
+        h3 {
+            margin-top: 45px;
+            margin-top: 9vw;
+        }
+    }
+    .business-hours, address {
+        div {
+            font-size: 30px;
+            font-size: 6vw;
+            color: white;
+            text-align: center;
+        }
+    }
+    label {
+        display: block;
+        font-family: 'Captureit', sans-serif;
+        color: $brickSectionMainClr;
+        font-size: 30px;
+        font-size: 6vw;
+
+    }
+    input, textarea {
+        font-size: 25px;
+        font-size: 5vw;
+        background-color: $brickSectionMainClr
+    }
+    textarea {
+        height: 100px;
+        height: 20vw;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        padding: 2vw;
+        border: none;
+        background-color: $brickSectionMainClr;
+        color: $brickSectionGrey;
+        font-family: 'Captureit', sans-serif;
+        font-size: 30px;
+        font-size: 6vw;
+    }
+}
+
+footer {
+    padding: 0px ;
+    color: #aaa;
+    text-align: center;
+    .licences {
+        font-size: 16px;
+        font-size: 3.2vw;
+    }
+    .copyright {
+        font-size: 20px;
+        font-size: 4vw;
+        line-height: 50px;
+        line-height: 10vw;
+    }
+    .social-icons {
+        overflow: hidden;
+        a {
+            display: inline-block;
+            margin-right: 20px;
+            margin-right: 4vw;
+        }
+        a:last-of-type {
+            margin-right: 0;
+        }
+        img {
+            width: 50px;
+            width: 10vw;
+        }
+        #social-icon-facebook {
+            background-image: url(../assets/img/icon-facebook.png);
+        }
+        #social-icon-instagram {
+            background-image: url(../assets/img/icon-instagram.png);
+        }
+    }
+}
